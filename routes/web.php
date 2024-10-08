@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Route;
-use illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,4 +14,17 @@ Auth::routes([
     'verify'=>false,
 ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group([
+    'middleware' => ['auth'], 
+    'prefix' => 'admin', 
+    'as' => 'admin.' 
+
+] ,function () {
+
+ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->Name('index');
+ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->Name('dashboard');
+    
+Route::resource ('/institution', App\Http\Controllers\InstitutionController::class);
+
+Route::resource ('/member', App\Http\Controllers\MemberController::class)->only(['index', 'show', 'destroy']);
+});
