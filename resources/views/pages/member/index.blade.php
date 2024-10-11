@@ -16,12 +16,11 @@
                     <thead>
                         <tr>
                             <th>No</Th>
-                                <th>member Name</th> 
-                                <th>Phone Number</th> 
-                                <th>Posotion</th>
-                                <th>Address</th>
-                                <th>Joining Date</th>
-                                <th>Status</th>
+                                <th>Nama siswa</th> 
+                                <th>Nama alat</th> 
+                                <th>Tanggal pinjam</th>
+                                <th>Tanggal kembali</th>
+                                <th>Status pengembalian</th>
                                 <th>Actions</th>
                         </tr>
                     </thead>
@@ -29,12 +28,11 @@
                         @foreach  ($members as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->name}}</td>
-                            <td>{{ $item->phonenumber}}</td>
-                            <td>{{ $item->posotion}}</td>
-                            <td>{{ $item->address}}</td>
-                            <td>{{ $item->joiningdate}}</td>
-                            <td>{{ $item->Status}}</td>
+                            <td>{{ $item->nama_siswa}}</td>
+                            <td>{{ $item->nama_alat}}</td>
+                            <td>{{ $item->tanggal_pinjam}}</td>
+                            <td>{{ $item->tanggal_kembali}}</td>
+                            <td>{{ $item->status_pengembalian}}</td>
                             <td>
                                 <a href="{{ route('admin.member.show', $item->id)}}" 
                                     class="btn btn-outline-secondary btn-sm me-1">

@@ -27,4 +27,5 @@ Route::group([
 Route::resource ('/institution', App\Http\Controllers\InstitutionController::class);
 
 Route::resource ('/member', App\Http\Controllers\MemberController::class)->only(['index', 'show', 'destroy']);
+
 });

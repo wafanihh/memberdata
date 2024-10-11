@@ -9,7 +9,12 @@ class Institution extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name',];
+    protected $fillable = [
+        'name',
+        'jumlah_alat',
+        'status_alat',
+        'kode_unik',
+    ];
 
     public function members()
     {

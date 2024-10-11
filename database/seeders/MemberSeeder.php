@@ -14,10 +14,12 @@ class MemberSeeder extends Seeder
      */
     public function run(): void
     {
-        Institution::create(['name' => 'Osis']);
-        Institution::create(['name' => 'Pramuka']);
-        Institution::create(['name' => 'Paskibra']);
-        Institution::create(['name' => 'Palang Merah Remaja']);
+        Institution::create(['name' => 'Mikroskop']);
+        Institution::create(['name' => 'Tabung Reaksi']);
+        Institution::create(['name' => 'Pipet']);
+        Institution::create(['name' => 'Gelas ukur']);
+        Institution::create(['name' => 'Timbangan Analitik']);
+        Institution::create(['name' => 'pH meter']);
 
         Member::factory(100)->create();
     }

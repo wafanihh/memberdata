@@ -21,27 +21,23 @@
                 </tr>
                 <tr>
                     <th>Nama</th>
-                    <td>{{ $institution->name }}</Strong></td>
+                    <td>{{ $institution->nama_siswa }}</Strong></td>
                 </tr>
                 <tr>
-                    <th>Kontak</th>
-                    <td>{{ $institution->phonenumber }}</Strong></td>
+                    <th>Nama Alat</th>
+                    <td>{{ $institution->nama_alat }}</Strong></td>
                 </tr>
                 <tr>
-                    <th>Jabatan</th>
-                    <td>{{ $institution->posotion }}</Strong></td>
+                    <th>Tanggal Pinjam</th>
+                    <td>{{ $institution->tanggal_pinjam }}</Strong></td>
                 </tr>
                 <tr>
-                    <th>Alamat</th>
-                    <td>{{ $institution->address}}</Strong></td>
+                    <th>Tanggal Kembali</th>
+                    <td>{{ $institution->tanggal_kembali}}</Strong></td>
                 </tr>
                 <tr>
-                    <th>Tanggal Bergabung</th>
-                    <td>{{ $institution->joiningdate }}</Strong></td>
-                </tr>
-                <tr>
-                    <th>Status</th>
-                    <td>{{ $institution->status }}</Strong></td>
+                    <th>Status Pengembalian</th>
+                    <td>{{ $institution->status_pengmbalian}}</Strong></td>
                 </tr>
                 <tr>
                     <td>Created_at</td>

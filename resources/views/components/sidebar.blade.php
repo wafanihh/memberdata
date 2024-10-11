@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vertical Navbar - Mazer Admin Dashboard</title>
+        <title>Vertical Navbar - Mazer Admin Dashboard </title>
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -49,8 +49,8 @@
                 <li
                     class="sidebar-item  ">
                     <a href="{{ route('admin.institution.index') }}" class='sidebar-link'>
-                        <i class="bi bi-building"></i>
-                        <span>Institutions</span>
+                        <i class="bi bi-tools"></i>
+                        <span>Alat</span>
                     </a>
                 </li>
 
@@ -58,7 +58,7 @@
                     class="sidebar-item  ">
                     <a href="{{ route('admin.member.index') }}" class='sidebar-link'>
                         <i class="bi bi-people"></i>
-                        <span>Member Lists</span>
+                        <span>Anggota</span>
                     </a>
                 </li>
 

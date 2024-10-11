@@ -10,12 +10,11 @@ class Member extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'phone_number',
-        'position',
-        'address',
-        'joining_date',
-        'status',
+        'nama_siswa',
+        'nama_alat',
+        'tanggal_pinjam',
+        'tanggal_kembali',
+        'status_pengembalian',
     ];
 
     public function institution()

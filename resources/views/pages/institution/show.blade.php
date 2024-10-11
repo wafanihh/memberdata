@@ -5,8 +5,8 @@
         <div class="page-title">
            <div class="page-title mb-3">
            <h3>
-           <span class="bi bi-building"></span>
-           Detail Institution
+           <span class="bi bi-tools"></span>
+           Detail Alat
            </h3>
            </div>
            <section class="section">
@@ -22,6 +22,18 @@
                 <tr>
                     <th>Nama</th>
                     <td><Strong>{{ $institutions->name}}</Strong></td>
+                </tr>
+                <tr>
+                    <th>Jumlah Alat</th>
+                    <td><Strong>{{ $institutions->jumlah_alat}}</Strong></td>
+                </tr>
+                <tr>
+                    <th>Status Alat</th>
+                    <td><Strong>{{ $institutions->status_alat}}</Strong></td>
+                </tr>
+                <tr>
+                    <th>Kode Unik</th>
+                    <td><Strong>{{ $institutions->kode_unik}}</Strong></td>
                 </tr>
                 <tr> 
                     <td>Created_at</td>

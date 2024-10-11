@@ -2,14 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Guest;
 use App\Models\Member;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Guest>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Member>
  */
-class GuestFactory extends Factory
+class MemberFactory extends Factory
 {
     protected $model = Member::class;
     
@@ -23,19 +22,21 @@ class GuestFactory extends Factory
         $dateTime = $this->faker->dateTimeBetween('1 month ago', 'now');
 
         return [
-            'full_name' => $this->faker->name(),
+            'nama_siswa' => $this->faker->name(),
             'institution_id' => $this->faker->numberBetween(1, 3),
             'from' => $this->faker->randomElement([
-                'Osis',
-                'Pramuka',
-                'Paskibra',
-                'Palang merah remaja'
+                'Mikroskop',
+                'Taung Reaksi',
+                'Pipet',
+                'Gelas Ukur',
+                'Timbangan Analitik',
+                'pH Meter',
             ]), 
-            'phonenumber' =>'+62' . $this->faker->numerify('##########'),
-            'position' => $this->faker->jobTitle(),
-            'address' => $this->faker->address(),
-            'joining_date' => $dateTime->format('Y-m-d'),
-            'status' => $this->faker->randomElement(['active', 'inactive']),
+            'nama_alat' =>'+62' . $this->faker->word(),
+            'tanggal_pinjam' => $this->faker->date(),
+            'tanggal_kembali' => $dateTime,
+            'status_pengembalian' => 'Belum Dikembalikan',
+            
         ];
     }
 }

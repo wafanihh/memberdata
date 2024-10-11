@@ -5,8 +5,8 @@
         <div class="page-title">
             <div class="page-title mb-3">
                 <h3>
-                    <span class="bi bi-building"></span>
-                    Institution
+                    <span class="bi bi-tools"></span>
+                    Alat
                 </h3>
             </div>
 
@@ -21,7 +21,10 @@
                         <table id="datatable" class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Institution Name</th>
+                                    <th>Nama Alat</th>
+                                    <th>Jumlah Alat</th>
+                                    <th>Status Alat</th>
+                                    <th>Kode Unik</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -29,6 +32,9 @@
                                 @foreach ($institutions as $item)
                                     <tr>
                                         <td>{{ $item->name }}</td>
+                                        <td>{{ $item->jumlah_alat }}</td>
+                                        <td>{{ $item->status_alat }}</td>
+                                        <td>{{ $item->kode_unik }}</td>
                                         <td>
                                             <a href="{{ route('admin.institution.show', $item->id) }}"
                                                 class="btn btn-outline-success btn-sm me-1">

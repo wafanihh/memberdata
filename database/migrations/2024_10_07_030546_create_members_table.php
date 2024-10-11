@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name', 100);
-            $table->string('phonenumber',16)->nullable();
-            $table->string('posotion', 128)->nullable();
-            $table->string('address', 128)->nullable();
-            $table->string('joining_date', 128)->nullable();
-            $table->string('status', 128)->nullable();
+            $table->string('nama_siswa', 100);
+            $table->string('nama_alat',16);
+            $table->date('tanggal pinjam', 128);
+            $table->date('tanggal_kembali', 128)->nullable();
+            $table->string('status_pengembalian')->default('Belum Kembali');
             $table->timestamps();
         });
     }
