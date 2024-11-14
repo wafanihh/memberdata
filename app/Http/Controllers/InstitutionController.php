@@ -59,15 +59,23 @@ class InstitutionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        $request->validate([
-            'name' => 'required|max:128,'. $id,
-     ]);
-         $institutions = Institution::find($id);
-         $institutions->update($request->all());
-         return redirect()->route('admin.institution.index', compact('institutions'));
-    }
+    public function update(Request $request, $id)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'jumlah_alat' => 'required|integer',
+        'status_alat' => 'required|string|max:255',
+        'kode_unik' => 'required|integer',
+    ]);
+
+    // Cari data institution berdasarkan ID dan update
+    $institution = Institution::findOrFail($id);
+    $institution->update($validated);
+
+    // Redirect setelah update
+    return redirect()->route('admin.institution.index')->with('success', 'Data berhasil diperbarui!');
+}
+
 
     /**
      * Remove the specified resource from storage.

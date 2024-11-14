@@ -26,7 +26,7 @@ class MemberFactory extends Factory
             'institution_id' => $this->faker->numberBetween(1, 3),
             'from' => $this->faker->randomElement([
                 'Mikroskop',
-                'Taung Reaksi',
+                'Tabung Reaksi',
                 'Pipet',
                 'Gelas Ukur',
                 'Timbangan Analitik',

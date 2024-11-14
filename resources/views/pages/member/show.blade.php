@@ -1,54 +1,55 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="pages-heding">
+<div class="pages-heading">
     <div class="page-title mb-3">
         <h3> 
-            <span class="bi bi-building"></span>
-            Detail Institution 
+            <span class="bi bi-people"></span>
+            Detail Member 
         </h3>
     </div>
 
     <section class="section">
         <div class="card">
             <div class="card-body"> 
-            <a href="{{route('admin.institution.index')}}" class="btn btn-outline-secondary mb-2">Kembali</a>
+            <a href="{{ route('admin.member.index') }}" class="btn btn-outline-secondary mb-2">Kembali</a>
 
-            <table class="table table-striped table-brodered">
+            <table class="table table-striped table-bordered">
                 <tr>
                     <th>ID</th>
-                    <td>{{ $institution->id }}</Strong></td>
+                    <td>{{ $members->id }}</td>
                 </tr>
                 <tr>
                     <th>Nama</th>
-                    <td>{{ $institution->nama_siswa }}</Strong></td>
+                    <td>{{ $members->nama_siswa }}</td>
                 </tr>
                 <tr>
                     <th>Nama Alat</th>
-                    <td>{{ $institution->nama_alat }}</Strong></td>
+                    <td>{{ $members->nama_alat }}</td>
                 </tr>
                 <tr>
                     <th>Tanggal Pinjam</th>
-                    <td>{{ $institution->tanggal_pinjam }}</Strong></td>
+                    <td>{{ $members->tanggal_pinjam }}</td>
                 </tr>
                 <tr>
                     <th>Tanggal Kembali</th>
-                    <td>{{ $institution->tanggal_kembali}}</Strong></td>
+                    <td>{{ $members->tanggal_kembali }}</td>
                 </tr>
                 <tr>
                     <th>Status Pengembalian</th>
-                    <td>{{ $institution->status_pengmbalian}}</Strong></td>
+                    <td>{{ $members->status_pengembalian }}</td>
                 </tr>
                 <tr>
                     <td>Created_at</td>
-                    <td>{{ Carbon\Carbon::parse($institution->created_at)->format('DD MMMM Y HH:mm') }}</td>
+                    <td>{{ \Carbon\Carbon::parse($members->created_at)->format('d MMMM Y HH:mm') }}</td>
                 </tr>
                 <tr>
                     <td>Updated_at</td>
-                    <td>{{ Carbon\Carbon::parse($institution->updated_at)->format('DD MMMM Y HH:mm') }}</td>
+                    <td>{{ \Carbon\Carbon::parse($members->updated_at)->format('d MMMM Y HH:mm') }}</td>
                 </tr>
             </table>
             </div>
         </div>
+    </section>
 </div>
 @endsection
